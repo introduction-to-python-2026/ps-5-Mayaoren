@@ -2,7 +2,26 @@
 
 
 def split_before_uppercases(formula):
-    pass  # replace the pass with your code
+    
+    start = 0        # beginning of current substring
+    end = 1          # end index moves through the string
+    split_formula = []
+
+    # Loop starting from second character (index 1)
+    while end < len(formula):
+        if formula[end].isupper():
+            # Append current chunk
+            split_formula.append(formula[start:end])
+            start = end  # Start new chunk here
+
+        end += 1  # Move to next character
+
+    # Append the final part
+    if formula[start:end]!='':
+      split_formula.append(formula[start:end])
+
+    return split_formula
+
 
 def split_at_digit(formula):
     pass  # replace the pass with your code
