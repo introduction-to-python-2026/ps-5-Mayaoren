@@ -1,7 +1,7 @@
 
 
 
-def split_before_uppercases(formula):
+def split_by_capitals (formula):
     
     start = 0        # beginning of current substring
     end = 1          # end index moves through the string
@@ -48,7 +48,7 @@ def count_atoms_in_molecule(molecular_formula):
     # Step 1: Initialize an empty dictionary to store atom counts
     my_dict = {}
 
-    for atom in split_before_uppercases(molecular_formula):
+    for atom in split_by_capitals(molecular_formula):
         atom_name, atom_count = split_at_digit(atom)
         
         # Step 2: Update the dictionary with the atom name and count
